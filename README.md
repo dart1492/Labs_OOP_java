@@ -1,2 +1,3 @@
 # Labs_2term_java
-Laboratory tasks form the university
+Labs for Uni
+Each package is for separate lab
