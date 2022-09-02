@@ -1,7 +1,7 @@
-package Lab_4;
+package lab4;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Lab_3");
+        System.out.println("lab3");
     }
 }
