@@ -5,11 +5,6 @@ public class Time {
     private int minutes;
     private int seconds;
 
-
-    private int calc_all_seconds (){
-       return this.hours * 3600 + this.minutes*60 + this.seconds;
-    }
-
     public Time() {
         this.hours = 0;
         this.minutes = 0;
@@ -83,7 +78,6 @@ public class Time {
 
     }
 
-
     public Time time_dif(Time second){
         Time Res = new Time();
         int temp_all_seconds = this.get_all_seconds() - second.get_all_seconds();
@@ -132,7 +126,7 @@ public class Time {
 
     }
 
-    public int getHours() {
+    /*public int getHours() {
         return hours;
     }
 
@@ -157,6 +151,6 @@ public class Time {
     public void setSeconds(int seconds) {
         this.check_valid_time(this.hours, this.minutes,seconds);
         this.seconds = seconds;
-    }
+    }*/
 
 }
