@@ -1,3 +1,3 @@
 # Labs_2term_java
-Labs for Uni
-Each package is for separate lab
+Лабораторні з предмету ООП <br/>
+Кожний пакет - окрема робота
