@@ -47,9 +47,10 @@ public class WalkRobot extends Robot implements Shiftable, Rotatable {
                 int k = 0;
                 while(k < actionList.get(i).get_steps()){
                     this.define_action(actionList.get(i).get_action());
-                    System.out.println(this.toString()); // will print after each action
+
                     k++;
                 }
+                System.out.println(this.toString()); // will print after each action
             }
         } else {
             System.out.println("Action list is empty");
@@ -75,19 +76,21 @@ public class WalkRobot extends Robot implements Shiftable, Rotatable {
 
     @Override
     public void shiftForward() {
-        if (course == 0 || course == 180){
-            this.x += Shiftable.step_shift;
-        } else if (course == 90 || course == 270 ) {
-            this.y += Shiftable.step_shift;
+        switch (course){
+            case 0 -> this.x += Shiftable.step_shift;
+            case 90 -> this.y -= Shiftable.step_shift;
+            case 180 -> this.x -= Shiftable.step_shift;
+            case 270 -> this.y += Shiftable.step_shift;
         }
     }
 
     @Override
     public void shiftBackward() {
-        if (course == 0 || course == 180){
-            this.x -= Shiftable.step_shift;
-        } else if (course == 90 || course == 270 ) {
-            this.y -= Shiftable.step_shift;
+        switch (course){
+            case 0 -> this.x -= Shiftable.step_shift;
+            case 90 -> this.y += Shiftable.step_shift;
+            case 180 -> this.x += Shiftable.step_shift;
+            case 270 -> this.y -= Shiftable.step_shift;
         }
     }
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Action {
 
-    private int step_count;
+    final private int step_count;
     private ActionTypes type;
 
     public static enum ActionTypes{
